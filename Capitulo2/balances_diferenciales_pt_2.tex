@@ -1,20 +1,23 @@
 
 \subsection{Difusión con reacción química homogénea}
 
-\begin{figure}
+\begin{minipage}{0.5\textwidth} 
     \centering
-   % \includegraphics[width=0.5\linewidth]{Captura de Pantalla 2024-12-22 a la(s) 21.39.31.png}
-    \caption{Adsorción de A en B, con reacción homogénea en la fase líquida}
-    %\label{fig:enter-label}
-\end{figure}
+    \includegraphics[width=0.8\linewidth]{Capitulo2/Imagenes/Fig_2.9.png} 
+    \captionof{figure}{Absorción de A en B con reacción homogénea en la fase líquida} 
+    \label{fig:Fig_2.9}
+\end{minipage}%
+\begin{minipage}{0.4\textwidth} 
+    En la figura \ref{fig:Fig_2.9}, el gas \( A \) se disuelve en el líquido \( B \). Al difundirse \( A \) en \( B \), ocurre una reacción \( A + B \xrightarrow{} AB \). Por ejemplo, la absorción de \( CO_2 \) en una solución de NaOH.
+        En este caso, el proceso es descrito por la ecuación (1.30), en la cual, no hay dependencia con el tiempo y el sistema está en reposo \( \underline{v} = 0 \).
+\end{minipage}
+    
 
-En la fig 2.9, el gas A se disuelve en el líquido B. Al difundirse A en B, ocurre una reacción $A+B\xrightarrow{}AB$. Por ejemplo, la absorción de $CO_2$ en una solución de NaOH.
-En este caso, el proceso es descrito por la ecuación (1.30), en la cual, no hay dependencia con el tiempo y el sistema está en reposo $\underline{v}=0$. 
-
+\vspace{1 cm}
 Suponiendo una reacción de primer orden para la descomposición de A, la ecuación (1.30) se reduce a:
 
 \begin{equation}   
- D_{AB}\frac{d^2(C_A)}{dz^2}+R_A=0
+ \mathscr{D}_{AB}\frac{d^2(C_A)}{dz^2}+R_A=0
 \end{equation}
 
 
@@ -36,13 +39,13 @@ $$\Gamma=\frac{C_A}{C_{A0}}$$ $$\zeta=\frac{z}{L}$$
 
 La ecuación (2.55) se transforma en:
 \begin{equation}
-    \frac{d^2\Gamma}{d\zeta^2}-(\frac{k_1L^2}{D_{AB}})\Gamma=0
+    \frac{d^2\Gamma}{d\zeta^2}-(\frac{k_1L^2}{\mathscr{D}_{AB}})\Gamma=0
 \end{equation}
 \begin{equation}
   \frac{d^2\Gamma}{d\zeta^2}-\phi^2\Gamma=0  
 \end{equation}
 
-Defínase $\phi=(\frac{k_1L^2}{D_{AB}})^\frac{1}{2}$, el cual corresponde al módulo de Thiele.
+Defínase $\phi=(\frac{k_1L^2}{\mathscr{D}_{AB}})^\frac{1}{2}$, el cual corresponde al módulo de Thiele.
 
 Las nuevas condiciones de fromtera adimensionales corresponden a :
 \begin{equation}
@@ -88,7 +91,7 @@ Se llega a la solución particular del problema:
 El flux molar en $z=0$ es:
 
 \begin{equation}
-    N_{Az}|_{z=0}=-D_{AB}\frac{d(C_A)}{dz}|_{z=0}=-D_{AB}\frac{C_{A0}}{L}\frac{d\Gamma}{d\zeta}|_{\zeta=0}=D_{AB}\frac{C_{A0}}{L}\phi\tanh(\phi)
+    N_{Az}|_{z=0}=-\mathscr{D}_{AB}\frac{d(C_A)}{dz}|_{z=0}=-\mathscr{D}_{AB}\frac{C_{A0}}{L}\frac{d\Gamma}{d\zeta}|_{\zeta=0}=\mathscr{D}_{AB}\frac{C_{A0}}{L}\phi\tanh(\phi)
 \end{equation}
 
 
@@ -96,21 +99,20 @@ El flux molar en $z=0$ es:
 \subsection{Absorción de gas con reacción química en un tanque de agitación}
 Considere un sistema en el que el gas A disuelto se combina con el líquido B por una reacción química de primer orden. Por ejemplo, la absorsión de $SO_2$ o $H_2S$ en NaOH en solución acuosa.
 
-¡Aquí van las figuras 2.10
-\begin{figure}
+\begin{figure}[H]
     \centering
-    %\includegraphics[width=0.5\linewidth]{Captura de Pantalla 2025-02-01 a la(s) 21.38.54.png}
-    \caption{Perfil de concentración predicho en la pekícula de líquido que rodea a una burbuja}
+    \includegraphics[width=\linewidth]{Capitulo2/Imagenes/Fig_2.10.png}
+    \caption{Perfil de concentración predicho en la película de líquido que rodea a una burbuja}
     %\label{fig:enter-label}
 \end{figure}
 
 Este sistema tiene las siguientes condiciones en la frontera:
 
 \begin{equation}
-    C_A|_{z=0}=C_{A0}
+    C_A|_{z=0}=C_{A0} \label{eq_2.67}
 \end{equation}
 \begin{equation}
-    C_A|_{z=\delta}=C_{A\delta}
+    C_A|_{z=\delta}=C_{A\delta}\label{eq_2.68}
 \end{equation}
 Si estas condicones se expresan en las siguientes variables adimensionales:
 
@@ -120,9 +122,9 @@ Si estas condicones se expresan en las siguientes variables adimensionales:
 \begin{equation*}
     \Gamma|_{\zeta=1}=B
 \end{equation*}
-En donde $\zeta=\frac{z}{\delta}$, $\Gamma=\frac{C_A}{C_{A0}}$, $B=\frac{C_{A\delta}}{C_{A0}}$ y $\phi^2=\frac{k_1\delta^2}{D_{AB}}$
+En donde $\zeta=\frac{z}{\delta}$, $\Gamma=\frac{C_A}{C_{A0}}$, $B=\frac{C_{A\delta}}{C_{A0}}$ y $\phi^2=\frac{k_1\delta^2}{\mathscr{D}_{AB}}$
 
-La ecuación a resolver corresponde a la ecuación (2.59) con las condiciones nuevas; es decir:
+La ecuación a resolver corresponde a la ecuación \ref{eq_2.68} con las condiciones nuevas; es decir:
 \begin{equation*}
     \Gamma=C_1\cosh({\phi\zeta})+C_2\sinh({\phi\zeta})
 \end{equation*}
@@ -134,13 +136,13 @@ Al evaluar la ecuación con las condiciones fronterizas, se obtiene el siguiente
 Esta última ecuación (2.65) describe el perfil de la curva con reacción. Se supone que la concentración de A fuera de la película es $C_{A\delta}$, por lo que, si la superficie de todas las burbujas en la superficie es S, la cantidad de A consumida por la reacción química es:
 
 \begin{equation}
-    SN_{Az}|_{z=\delta}=-SD_{AB}\frac{dC_A}{dz}|_{z=\delta}=Vk_1C_A\delta
+    SN_{Az}|_{z=\delta}=-S\mathscr{D}_{AB}\frac{dC_A}{dz}|_{z=\delta}=Vk_1C_A\delta
 \end{equation}
 En donde V es el volumen de la fase líquida.
 Luego;
 
 \begin{equation*}
-    -\frac{dC_A}{dz}|_{z=\delta}=-\frac{C_{A0}}{\delta}\frac{d\Gamma}{d\zeta}|_{\zeta=1}=\frac{Vk_1C_{A\delta}}{SD_{AB}}\longrightarrow-\frac{d\Gamma}{d\zeta}|_{\zeta=1}=\frac{V}{S\delta}\phi^2B
+    -\frac{dC_A}{dz}|_{z=\delta}=-\frac{C_{A0}}{\delta}\frac{d\Gamma}{d\zeta}|_{\zeta=1}=\frac{Vk_1C_{A\delta}}{S\mathscr{D}_{AB}}\longrightarrow-\frac{d\Gamma}{d\zeta}|_{\zeta=1}=\frac{V}{S\delta}\phi^2B
 \end{equation*}
 Como $\cosh^2(\phi)-\sinh^2(\phi)=1$, de la solución particular para $\Gamma$ se obtiene:
 
@@ -154,14 +156,24 @@ Substituyendo B en la solución para Gamma (ec 2.65), se obtiene:
 El flux de masa absorbido con reacción química ( normalizada) es:
 
 \begin{equation*}
-    \widetilde{N}=\frac{N_{Az}}{D_{AB}\frac{C_{A0}}{\delta}}=-\frac{D_{AB}}{D_{AB}\frac{C_{A0}}{\delta}}\frac{d(C_A)}{dz}|_{z=0}\Rightarrow-\frac{d\Gamma}{d\zeta}|_{\zeta=0}=\frac{\phi\cosh(\phi}{\sinh(\phi)}-[\frac{\phi}{\sinh(\phi)[\cosh(\phi)+\frac{V\phi\sinh(\phi)}{S\delta}]}]
+    \widetilde{N}=\frac{N_{Az}}{\mathscr{D}_{AB}\frac{C_{A0}}{\delta}}=-\frac{\mathscr{D}_{AB}}{\mathscr{D}_{AB}\frac{C_{A0}}{\delta}}\frac{d(C_A)}{dz}|_{z=0}\Rightarrow-\frac{d\Gamma}{d\zeta}|_{\zeta=0}=\frac{\phi\cosh(\phi}{\sinh(\phi)}-[\frac{\phi}{\sinh(\phi)[\cosh(\phi)+\frac{V\phi\sinh(\phi)}{S\delta}]}]
 \end{equation*}
 \begin{equation}
     =\frac{\phi}{\sinh(\phi)}[\cosh(\phi)-\frac{1}{\cosh(\phi)+\frac{V\phi\sinh(\phi9}{S\delta}}]
 \end{equation}
-La ecuación (2.68) se grafica en la figura 2.11.
 
-Se puede observar en la fig (2.11) que:
+%\begin{figure}[H] 
+
+     %   \includegraphics[width=\linewidth]{Capitulo2/Imagenes/Imagen_11_cap_2.png}
+     %   \caption{Absorción de gas con reacción química}
+    %    \label{fig:Fig_2.11}
+
+%\end{figure}
+
+La ecuación (2.68) se grafica en la figura %\ref{fig:Fig_2.11}.
+Se puede observar en dicha figura que:
+
+\vspace{1 cm}
 
 1) $\widetilde{N}$ aumenta con $\phi$ para todo $\frac{V}{S\delta}$
 
@@ -199,7 +211,7 @@ Considérese un reactor catalítico, en donde se lleva a cabo la reacción $2A\r
 Las ecs (1.25) y (1.19) en combinación con la ec (2.69) son:
 
 \begin{equation}
-    N_{Az}=-\frac{cD_{AB}}{1-\frac{x_A}{2}}\frac{d(x_A)}{dz}
+    N_{Az}=-\frac{c\mathscr{D}_{AB}}{1-\frac{x_A}{2}}\frac{d(x_A)}{dz}
 \end{equation}
 y 
 \begin{equation}
@@ -230,7 +242,7 @@ A partir de la ec (2.72), se obtiene:
 Evaluando $C_1$ y $C_2$ con respecto a las condiciones (2.73), se obtiene:
 
 \begin{equation}
-    N_{Az}=\frac{2cD_{AB}}{\delta}\ln(\frac{1}{1-\frac{x_{A0}}{2}})
+    N_{Az}=\frac{2c\mathscr{D}_{AB}}{\delta}\ln(\frac{1}{1-\frac{x_{A0}}{2}})
 \end{equation}
 
 La reacción ocurre instantáneamente en la superficie del catalizador, por lo que la conversión de A a B es un proceso regulado por la difusión en la capa de gas de grozor $\delta$. 
@@ -267,7 +279,7 @@ Realizando el álgebra y derivando uestro perfil de concentración, podemos dete
 Substituyendo la ec (2.77) en la ec (2.70), se obtiene:
 
 \begin{equation*}
-    N_{Az}=-\frac{cD_{AB}}{(1-\frac{x_A}{2})}[(1-\frac{x_A}{2})(\frac{-2}{\delta})\ln (\frac{1-\frac{N_{Az}}{k_1c}}{1-\frac{x_{A0}}{2}})]
+    N_{Az}=-\frac{c\mathscr{D}_{AB}}{(1-\frac{x_A}{2})}[(1-\frac{x_A}{2})(\frac{-2}{\delta})\ln (\frac{1-\frac{N_{Az}}{k_1c}}{1-\frac{x_{A0}}{2}})]
 \end{equation*}
 Utilizando una aproximación de una serie de Taylor truncada en el primer término para $\ln (1-\frac{N_{Az}}{2k_1c})$ asumiendo que $k_1$ es grande.
 
@@ -281,20 +293,20 @@ Así, aproximamos $\ln (1-\frac{N_{Az}}{2k_1c})$ a $-\frac{N_{Az}}{2k_1c}$
 y se obtiene:
 
 \begin{equation*}
-   N_{Az}=\frac{2cD_{Ab}}{\delta}[-\frac{N_{Az}}{2k_1c}-\ln (1-\frac{x_{A0}}{2})] 
+   N_{Az}=\frac{2c\mathscr{D}_{AB}}{\delta}[-\frac{N_{Az}}{2k_1c}-\ln (1-\frac{x_{A0}}{2})] 
 \end{equation*}
 \begin{equation*}
-   N_{Az}(1+\frac{D_{AB}}{k_1\delta})=2c\frac{D_{AB}}{\delta}\ln (\frac{1}{1-\frac{x_{A0}}{2}}  )  
+   N_{Az}(1+\frac{\mathscr{D}_{AB}}{k_1\delta})=2c\frac{\mathscr{D}_{AB}}{\delta}\ln (\frac{1}{1-\frac{x_{A0}}{2}}  )  
 \end{equation*}
 \begin{equation}
-   N_{Az}=2c\frac{D_{AB}}{\delta(1+\frac{D_{AB}}{k_1\delta})}\ln (\frac{1}{1-\frac{x_{A0}}{2}}  )  
+   N_{Az}=2c\frac{\mathscr{D}_{AB}}{\delta(1+\frac{\mathscr{D}_{AB}}{k_1\delta})}\ln (\frac{1}{1-\frac{x_{A0}}{2}}  )  
 \end{equation}
 
-El número adimensional $\frac{k_1\delta}{D_{AB}}=Da$ es el número de Damköler, el cual describe la relación entre reacción y difusión. Si $Da\rightarrow\infty$, se obtiene el caso de reacción dominante y la ecuación toma la forma de la ec (2.74)
+El número adimensional $\frac{k_1\delta}{\mathscr{D}_{AB}}=Da$ es el número de Damköler, el cual describe la relación entre reacción y difusión. Si $Da\rightarrow\infty$, se obtiene el caso de reacción dominante y la ecuación toma la forma de la ec (2.74)
 
 \subsection{Difusión con reacción química en medios porosos}
 
-En este caso, se describe la difusión de los reactivos en un medio poroso en términos de una difusividad efectiva ($D_A$). SUpóngase que la reacción tiene lugar en la superficie sólida de un catalizador cuya simetría es esférica y posee un radio R, la reacción es $A\rightarrow B$. Esta partícula esférica está sumergida en una corriente de gas con A y B presentes. A se difunde en los poros de la superficie esférica y ahí sucede la reacción. La ec (1.30) dentro del medio poroso en coordenadas esfericas es:
+En este caso, se describe la difusión de los reactivos en un medio poroso en términos de una difusividad efectiva ($D_A$). Supóngase que la reacción tiene lugar en la superficie sólida de un catalizador cuya simetría es esférica y posee un radio R, la reacción es $A\rightarrow B$. Esta partícula esférica está sumergida en una corriente de gas con A y B presentes. A se difunde en los poros de la superficie esférica y ahí sucede la reacción. La ec (1.30) dentro del medio poroso en coordenadas esfericas es:
 
 \begin{equation}
     0=D_A\frac{1}{r^2}\frac{d}{dr}(r^2\frac{d(C_A)}{dr})-R_A
@@ -414,7 +426,7 @@ Un fluido B fluye a una velocidad constante $v_0$. en algún punto, la especie A
 Como este es un problema de convección-difusión, en coordenadas cilíndricas (vea la ec B en el apéndice B), en la dirección z, se tiene:
 
 \begin{equation}
-    \frac{\partial C_A}{\partial t}+v_z\frac{\partial C_A}{\partial z}=D_{AB}[\frac{1}{r}\frac{\partial }{\partial r}(r\frac{\partial C_A}{\partial r})+\frac{\partial ^2C_A}{\partial z^2}]
+    \frac{\partial C_A}{\partial t}+v_z\frac{\partial C_A}{\partial z}=\mathscr{D}_{AB}[\frac{1}{r}\frac{\partial }{\partial r}(r\frac{\partial C_A}{\partial r})+\frac{\partial ^2C_A}{\partial z^2}]
 \end{equation}
 en donde $dt=\frac{dz}{v_0}$.
 
@@ -476,11 +488,11 @@ O de manera equivalente:
 \end{equation*}
 Al insertar en la ecuación (A.1), se obtiene:
 \begin{equation*}
-    v_0(\frac{z}{s}\frac{\partial C_A}{\partial s}+\frac{\partial C_A}{\partial z})=D_{AB}f(s,r,z)
+    v_0(\frac{z}{s}\frac{\partial C_A}{\partial s}+\frac{\partial C_A}{\partial z})=\mathscr{D}_{AB}f(s,r,z)
 \end{equation*}
 Cuya solución es:
 \begin{equation}
-    C_A=[\frac{W_A}{4\pi D_{AB}s}]e^{\frac{-v_0(s-z)}{2D_{AB}}}
+    C_A=[\frac{W_A}{4\pi \mathscr{D}_{AB}s}]e^{\frac{-v_0(s-z)}{2\mathscr{D}_{AB}}}
 \end{equation}
 Que satisface las condiciones de frontera:
 \begin{equation*}
@@ -488,13 +500,13 @@ Que satisface las condiciones de frontera:
 \end{equation*}
 La concentración de A lejos de la fuente es 0
 \begin{equation*}
-    2) -\frac{\partial C_A}{\partial s}|_{s \rightarrow0}=\frac{W_A}{4\pi D_{AB}s^2}
+    2) -\frac{\partial C_A}{\partial s}|_{s \rightarrow0}=\frac{W_A}{4\pi \mathscr{D}_{AB}s^2}
 \end{equation*}
 Este corresponde al sitio de la fuente
 \begin{equation*}
     \frac{\partial C_A}{\partial s}=\frac{\partial}{\partial s}[\frac{a}{s}e^{b(s-z)}]=a[\frac{b}{s}e^{b(s-z)}-\frac{1}{s^2}e^{b(s-z)}]=ae^{b(s-z)}[\frac{b}{s}-\frac{1}{s^2}]
 \end{equation*}
-En donde $a=\frac{W_A}{4\pi D_{AB}}$, entonces. Si $s\rightarrow 0$, recordando que $s^2=z^2+r^2$, tanto r como z deben tender a 0, por lo tanto:
+En donde $a=\frac{W_A}{4\pi \mathscr{D}_{AB}}$, entonces. Si $s\rightarrow 0$, recordando que $s^2=z^2+r^2$, tanto r como z deben tender a 0, por lo tanto:
 \begin{equation*}
     \frac{\partial C_A}{\partial s}|_{s\rightarrow 0}=\quad\lim_{s\rightarrow0}ae^{b(s-z)}[\frac{b}{s}-\frac{1}{s^2}]
 \end{equation*}
@@ -504,7 +516,7 @@ Se toma la siguiente consideración, en el límite $\frac{1}{s^2}>>\frac{b}{s}$ 
 \end{equation*}
 y finalmente:
 \begin{equation*}
-   -\frac{\partial C_A}{\partial s}|_{s\rightarrow 0}=\frac{W_A}{4\pi D_{AB}s^2} 
+   -\frac{\partial C_A}{\partial s}|_{s\rightarrow 0}=\frac{W_A}{4\pi \mathscr{D}_{AB}s^2} 
 \end{equation*}
  \begin{equation*}
      3) \frac{\partial C_A}{\partial r}|_{r\rightarrow0}=0
@@ -514,9 +526,9 @@ y finalmente:
     \frac{\partial C_A}{\partial r}=\frac{\partial C_A}{\partial s}\frac{\partial s}{\partial r}=\frac{r}{s}\frac{\partial C_A}{\partial s}=\frac{r}{s}(ae^{b(s-z)}[\frac{b}{s}-\frac{1}{s^2}])
  \end{equation*}
  si $r\rightarrow0$, $s\rightarrow z$ y el valor de la derivada es igual a 0, lo que nos dice que el máximo de la función $C_A$ está en el eje z.
- A partir de datos de $v_0$ y $W_A$ dados, se puede plantear un modelo de regresión lineal para la determinación de $D_{AB}$.
+ A partir de datos de $v_0$ y $W_A$ dados, se puede plantear un modelo de regresión lineal para la determinación de $\mathscr{D}_{AB}$.
  \begin{equation*}
-     ln(C_As)=ln(\frac{W_A}{4\pi D_{AB}})-v_0\frac{(s-z)}{2D_{AB}}
+     ln(C_As)=ln(\frac{W_A}{4\pi \mathscr{D}_{AB}})-v_0\frac{(s-z)}{2\mathscr{D}_{AB}}
  \end{equation*}
  En donde $s-z$ es la variable independiente y $C_As$ la variable dependiente.
 

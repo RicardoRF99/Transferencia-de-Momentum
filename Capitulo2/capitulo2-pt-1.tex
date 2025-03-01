@@ -24,13 +24,13 @@ A régimen permanente, la ec. (1.19) se reduce a:
 La ecuación (1.25) cuando $\underline{N_B} = 0$ se expresa como:
 
 \begin{equation}
-\underline{N_A} (1-x_A) = - c \mathcal{D}_{AB} \nabla x_A
+\underline{N_A} (1-x_A) = - c \mathscr{D}_{AB} \nabla x_A
 \end{equation}
 
 Si la difusión se da en una sola dirección (z), (2.1) y (2.2) requieren que:
 
 \begin{equation}
-	\frac{d}{dz} \left( \frac{c \mathcal{D}_{AB}}{1-x_A} \frac{dx_A}{dz} \right) = 0
+	\frac{d}{dz} \left( \frac{c \mathscr{D}_{AB}}{1-x_A} \frac{dx_A}{dz} \right) = 0
 \end{equation}
 
 Integrando con respecto a z
@@ -65,13 +65,13 @@ Se obtiene el siguiente perfil de concentraciones:
 El flux de masa es:
 
 \begin{equation}
-N_{Az} |_{z=z_1} = \left. \frac{ - c \mathcal{D_{AB}}}{1-x_A} \frac{dx_A}{dz} \right|_{z=z_1} = \left. \frac{c \mathcal{D}_{AB}}{x_B} \frac{dx_B}{dz} \right|_{z=z_1} =  \frac{c \mathcal{D}_{AB}}{z_2 - z_1} \ln{\frac{x_{B2}}{x_{B1}}}
+N_{Az} |_{z=z_1} = \left. \frac{ - c \mathcal{\mathscr{D}_{AB}}}{1-x_A} \frac{dx_A}{dz} \right|_{z=z_1} = \left. \frac{c \mathscr{D}_{AB}}{x_B} \frac{dx_B}{dz} \right|_{z=z_1} =  \frac{c \mathscr{D}_{AB}}{z_2 - z_1} \ln{\frac{x_{B2}}{x_{B1}}}
 \end{equation}
 
 que también puede ser expresado como: 
 
 \begin{equation}
-	N_{Az}|_{z=z_1} = \frac{c \mathcal{D}_{AB}}{(x_B)_{\ln{}}} \frac{(x_{A_1} - x_{A_2})}{z_2 - z_1}
+	N_{Az}|_{z=z_1} = \frac{c \mathscr{D}_{AB}}{(x_B)_{\ln{}}} \frac{(x_{A_1} - x_{A_2})}{z_2 - z_1}
 \end{equation}
 
 donde 
@@ -83,7 +83,7 @@ donde
 En términos de las presiones, la ec. (2.8) se puede expresar: 
 
 \begin{equation}
-N_{Az}|_{z=z_1} = p \frac{\mathcal{D}_{AB}/RT}{z_2 - z_1} \ln{\left( \frac{p_{B_2}}{p_{B_1}}\right)} = p\frac{\mathcal{D}_{AB}/RT}{(p_B)_{\ln}} \frac{p_{A_1}-p_{A_2}}{z_2 - z_1}
+N_{Az}|_{z=z_1} = p \frac{\mathscr{D}_{AB}/RT}{z_2 - z_1} \ln{\left( \frac{p_{B_2}}{p_{B_1}}\right)} = p\frac{\mathscr{D}_{AB}/RT}{(p_B)_{\ln}} \frac{p_{A_1}-p_{A_2}}{z_2 - z_1}
 \end{equation}
 
 
@@ -106,13 +106,13 @@ N_{Az}|_{z=z_1} = p \frac{\mathcal{D}_{AB}/RT}{z_2 - z_1} \ln{\left( \frac{p_{B_
 Primero, se iguala la velocidad de evaporación de $A$ con la velocidad a la que $A$ entra en la fase gas.
 
 \begin{equation}
--\frac{p_A}{M_A} \frac{Sdz}{dt} = \frac{c \mathcal{D}_{AB}}{(x_B)_{\ln}} \frac{x_{A_1}-x_{A_2}}{z_2 - z_1} S
+-\frac{p_A}{M_A} \frac{Sdz}{dt} = \frac{c \mathscr{D}_{AB}}{(x_B)_{\ln}} \frac{x_{A_1}-x_{A_2}}{z_2 - z_1} S
 \end{equation}
 
 Integrando la ec. (2.11): 
 
 \begin{equation}
-	\int_0^h (H+h)dh = \frac{c \mathcal{D}_{AB}}{(p_A/M_A)} \frac{(x_{A_1}-x_{A_2})}{(x_B)_{\ln}} \int_0^t dt = \frac{1}{2}c t
+	\int_0^h (H+h)dh = \frac{c \mathscr{D}_{AB}}{(p_A/M_A)} \frac{(x_{A_1}-x_{A_2})}{(x_B)_{\ln}} \int_0^t dt = \frac{1}{2}c t
 \end{equation}
 
 en donde $h(t) = z_1(0) - z_1(t)$ y $H = z_2 - z_1(0)$ es la distancia inicial de la columna de gas. $c$ es una constante.
@@ -137,15 +137,15 @@ $$N_A = \frac{\rho \text{Vol}}{M_A At} = \frac{(1.59)(0.0208)}{(154)(0.82)(36000
 
 De la ec. (2.10):
 
-$$N_{A_z} | _{z=z_1} = \frac{p}{RT} \mathcal{D}_{AB} \frac{\ln{(p_{B_2}/p_{B_1})}}{z_2 - z_1}$$
+$$N_{A_z} | _{z=z_1} = \frac{p}{RT} \mathscr{D}_{AB} \frac{\ln{(p_{B_2}/p_{B_1})}}{z_2 - z_1}$$
 
-$$\mathcal{D}_{AB} = (7.2 \times 10^{-9})\frac{(17.1)}{\ln{(p_{B_2}/p_{B_1})}} \frac{RT}{p}$$
+$$\mathscr{D}_{AB} = (7.2 \times 10^{-9})\frac{(17.1)}{\ln{(p_{B_2}/p_{B_1})}} \frac{RT}{p}$$
 
 donde $R = 82.06 \hspace{0.1cm} \frac{cm^3 atm}{gmol K}$, $T = 273 \hspace{0.1cm} K$
 
 $$p = \frac{755}{760} \hspace{0.1cm} atm , \hspace{0.5cm} \frac{p_{B_2}}{p_{B_1}} = \frac{755}{755-33}$$
 
-$$\mathcal{D}_{AB} = 0.0636 \hspace{0.1cm} cm^2/s$$
+$$\mathscr{D}_{AB} = 0.0636 \hspace{0.1cm} cm^2/s$$
 	
 \section{Difusión-Convección de masa}
 
@@ -175,39 +175,39 @@ A partir de la ec. (1.30) se obtiene:
 
 %\begin{equation}%
 %Use \label{original} and \tag{\ref{eq:original}}%
-$$	\underline{v} \cdot \nabla C_A = \mathcal{D}_{AB} \nabla^2 C_A $$
+$$	\underline{v} \cdot \nabla C_A = \mathscr{D}_{AB} \nabla^2 C_A $$
 %\end{equation}%
 
 que para $\underline{v} = (0, 0, v_z)$ tenemos:
 
 \begin{equation} \label{eq: manrefx}
-	v_z \frac{\partial C_A}{\partial z} = \mathcal{D}_{AB} \left[ \frac{\partial^2 C_A}{\partial x^2} + \frac{\partial^2 C_A}{\partial z^2}  \right]
+	v_z \frac{\partial C_A}{\partial z} = \mathscr{D}_{AB} \left[ \frac{\partial^2 C_A}{\partial x^2} + \frac{\partial^2 C_A}{\partial z^2}  \right]
 \end{equation}
 
 Definiendo al número de Peclet de masa ($Pe_M$) como: 
 
 \begin{equation}
-	Pe_M = Re Sch = \frac{uL}{\nu} \cdot \frac{\nu}{\mathcal{D}_{AB}} = \frac{uL}{\mathcal{D}_{AB}}
+	Pe_M = Re Sch = \frac{uL}{\nu} \cdot \frac{\nu}{\mathscr{D}_{AB}} = \frac{uL}{\mathscr{D}_{AB}}
 \end{equation}
 
 donde $u$ y $L$ son la velocidad y longitud características. En este caso $u = v_{\text{máx}}$. Se supone que a lo largo del eje $z$:
 
-$$Pe_M = \frac{v_{\text{máx}} L}{\mathcal{D}_{AB}} > 1$$
+$$Pe_M = \frac{v_{\text{máx}} L}{\mathscr{D}_{AB}} > 1$$
 
 El término convectivo predomina sobre el difusivo, por lo que
 
-$$v_z \frac{\partial C_A}{\partial z} > \mathcal{D}_{AB} \frac{\partial^2 C_A}{\partial z^2}$$
+$$v_z \frac{\partial C_A}{\partial z} > \mathscr{D}_{AB} \frac{\partial^2 C_A}{\partial z^2}$$
 
 y la ec. \eqref{eq: manrefx} se simplifica:
 
 \begin{equation} \label{eq: manrefx2}
-v_{z \text{máx}} \frac{\partial C_A}{\partial z} = \mathcal{D}_{AB} \frac{\partial^2 C_A}{\partial x^2}
+v_{z \text{máx}} \frac{\partial C_A}{\partial z} = \mathscr{D}_{AB} \frac{\partial^2 C_A}{\partial x^2}
 \end{equation}
 
 Como $dt = \frac{dz}{v_{\text{máx}}}$, entonces la ec. \eqref{eq: manrefx2} se expresa como:
 
 \begin{equation} \label{eq: manrefx3}
-	\frac{\partial C_A}{\partial t} = \mathcal{D}_{AB} \frac{\partial^2 C_A}{\partial x^2}
+	\frac{\partial C_A}{\partial t} = \mathscr{D}_{AB} \frac{\partial^2 C_A}{\partial x^2}
 \end{equation}
 
 Las condiciones de frontera son:
@@ -237,19 +237,19 @@ Considerando la concentración de $C_A$ adimensional:
 La solución de \eqref{eq: manrefx3} se obtiene por el método de combinación de variables, que consiste en formar un grupo adimensional con las variables de la ecuación. Se sugiere la siguiente relación:
 
 \begin{equation}
-	C_A' = C_A'(\eta) \hspace{0.5cm} \text{donde} \hspace{0.5cm} \eta = \frac{x}{\sqrt{4 \mathcal{D}_{AB} t}}
+	C_A' = C_A'(\eta) \hspace{0.5cm} \text{donde} \hspace{0.5cm} \eta = \frac{x}{\sqrt{4 \mathscr{D}_{AB} t}}
 \end{equation}
 
 de tal forma que:
 
 \begin{equation} \label{eq: manrefx4}
-	\frac{d C_A'}{dt} = \frac{d C_A'}{d \eta} \frac{\partial \eta}{\partial t} = \frac{x}{\sqrt{4 \mathcal{D}_{AB}}} \left( - \frac{1}{2} t^{-3/2}  \right) = - \frac{1}{2} \frac{\eta}{t} \frac{d C_A'}{d \eta}
+	\frac{d C_A'}{dt} = \frac{d C_A'}{d \eta} \frac{\partial \eta}{\partial t} = \frac{x}{\sqrt{4 \mathscr{D}_{AB}}} \left( - \frac{1}{2} t^{-3/2}  \right) = - \frac{1}{2} \frac{\eta}{t} \frac{d C_A'}{d \eta}
 \end{equation}
 
-$$\frac{dC_A'}{dx} = \frac{dC_A'}{d \eta} \frac{\partial \eta}{\partial x} = \frac{1}{\sqrt{4 \mathcal{D}_{AB} t}} \frac{dC_A'}{d \eta}$$
+$$\frac{dC_A'}{dx} = \frac{dC_A'}{d \eta} \frac{\partial \eta}{\partial x} = \frac{1}{\sqrt{4 \mathscr{D}_{AB} t}} \frac{dC_A'}{d \eta}$$
 
 \begin{equation} \label{eq: manrefx5}
-	\frac{\partial^2 C_A'}{\partial x^2} =  \frac{d^2 C_A'}{d \eta^2} \frac{1}{4 \mathcal{D}_{AB}t}
+	\frac{\partial^2 C_A'}{\partial x^2} =  \frac{d^2 C_A'}{d \eta^2} \frac{1}{4 \mathscr{D}_{AB}t}
 \end{equation}
 
 Sustituyendo \eqref{eq: manrefx4} y \eqref{eq: manrefx5} en la ec. \eqref{eq: manrefx3} se obtiene: 
@@ -301,23 +301,23 @@ C_A' = 1 - \frac{2}{\sqrt{\pi}} \int_0^\eta e^{-\bar{\eta}^2} d\bar{\eta} = 1 - 
  	\caption{Perfil de concentraciones donde $\delta$ es la longitud característica para la difusión de A en B.}
  \end{figure}
  
- Cuando $\eta = 2$, $\frac{C_A}{C_{A0}} \sim 0.01$ se puede definir una capa límite de difusión de $A$ en $B$ $\frac{\delta}{\sqrt{4\mathcal{D}_{AB}t}} = 2 \to \delta = 4 \sqrt{\mathcal{D}_{AB}t}$
+ Cuando $\eta = 2$, $\frac{C_A}{C_{A0}} \sim 0.01$ se puede definir una capa límite de difusión de $A$ en $B$ $\frac{\delta}{\sqrt{4\mathscr{D}_{AB}t}} = 2 \to \delta = 4 \sqrt{\mathscr{D}_{AB}t}$
  
  El flux de masa local en la interfase se puede obtener:
  
- $$N_{Ax}|_{x=0} = -\mathcal{D}_{AB} \left. \frac{\partial C_A}{\partial x} \right|_{x=0} = -\mathcal{D}_{AB} C_{A0} \left. \frac{\partial C_A'}{\partial \eta} \right| _{\eta = 0} \frac{\partial \eta}{\partial x} = -\mathcal{D}_{AB} \left( \frac{-2}{\sqrt{\pi}} \right) \frac{C_{A0}}{\sqrt{\mathcal{D}_{AB}t}}$$
+ $$N_{Ax}|_{x=0} = -\mathscr{D}_{AB} \left. \frac{\partial C_A}{\partial x} \right|_{x=0} = -\mathscr{D}_{AB} C_{A0} \left. \frac{\partial C_A'}{\partial \eta} \right| _{\eta = 0} \frac{\partial \eta}{\partial x} = -\mathscr{D}_{AB} \left( \frac{-2}{\sqrt{\pi}} \right) \frac{C_{A0}}{\sqrt{\mathscr{D}_{AB}t}}$$
  
  \begin{equation}
- 	N_{Ax}|_{x=0} = C_{A0} \sqrt{\frac{\mathcal{D}_{AB}t}{\pi}} = C_{A0} \sqrt{ \frac{\mathcal{D}_{AB} v_{\text{máx}}}{\pi z}}
+ 	N_{Ax}|_{x=0} = C_{A0} \sqrt{\frac{\mathscr{D}_{AB}t}{\pi}} = C_{A0} \sqrt{ \frac{\mathscr{D}_{AB} v_{\text{máx}}}{\pi z}}
  	\tag{\ref{eq: manrefx9}}
  \end{equation}
  
  El flujo de masa de $A$ absorbido por $B$ es la superficie $LW$ es:
  
- $$W_A = \int_0^W \int_0^L N_{Ax}|_{x=0} dz dy = WC_{A0} \sqrt{\frac{\mathcal{D}_{AB} v_{\text{máx}}}{\pi}} \int_0^L \frac{dz}{\sqrt{z}}$$
+ $$W_A = \int_0^W \int_0^L N_{Ax}|_{x=0} dz dy = WC_{A0} \sqrt{\frac{\mathscr{D}_{AB} v_{\text{máx}}}{\pi}} \int_0^L \frac{dz}{\sqrt{z}}$$
  
  \begin{equation} \label{eq: manrefx10}
- W_A = WLC_{A0} \sqrt{\frac{4\mathcal{D}_{AB} v_{\text{máx}}}{\pi L}}
+ W_A = WLC_{A0} \sqrt{\frac{4\mathscr{D}_{AB} v_{\text{máx}}}{\pi L}}
  \end{equation}
  
  Este desarrollo se puede aplicar a la absorción de gas en burbujas ascendentes.
@@ -335,7 +335,7 @@ C_A' = 1 - \frac{2}{\sqrt{\pi}} \int_0^\eta e^{-\bar{\eta}^2} d\bar{\eta} = 1 - 
  Si $C_{A0}$ es la solubilidad de A en B, la rapidez de absorción molar es:
  
  \begin{equation}
- 	(N_A)_{\text{prom}} = C_{A0} \sqrt{\frac{4 \mathcal{D}_{AB} v_t}{\pi D}}
+ 	(N_A)_{\text{prom}} = C_{A0} \sqrt{\frac{4 \mathscr{D}_{AB} v_t}{\pi D}}
  \end{equation}
  
 \subsection{Disolución de sólidos en una película descendente}
@@ -361,7 +361,7 @@ En la aproximación de capa límite, se puede linealizar el perfil cerca de la p
 La ecuación de difusión en este caso es:
 
 \begin{equation} \label{eq: manrefx10.1}
-	ay \frac{\partial C_A}{\partial z} = \mathcal{D}_{AB} \frac{\partial^2 C_A}{\partial y^2}
+	ay \frac{\partial C_A}{\partial z} = \mathscr{D}_{AB} \frac{\partial^2 C_A}{\partial y^2}
 \end{equation}
 
 Las condiciones de frontera son:
@@ -381,11 +381,11 @@ Las condiciones de frontera son:
 Por el método de combinación de variables, se sugiere la siguiente combinación:
 
 \begin{equation} \label{eq: manrefx11}
-	\frac{C_A}{C_{A0}} = f(\eta) \hspace{0.5cm} \text{donde} \hspace{0.5cm} \eta = y \left( \frac{a}{9 \mathcal{D}_{AB}z} \right)^{1/3}
+	\frac{C_A}{C_{A0}} = f(\eta) \hspace{0.5cm} \text{donde} \hspace{0.5cm} \eta = y \left( \frac{a}{9 \mathscr{D}_{AB}z} \right)^{1/3}
 \end{equation}
 
 \begin{equation}
-	\frac{\partial f}{\partial z} = \frac{\partial f}{\partial \eta} \left( \frac{\partial \eta}{\partial z} \right) = - y \left( \frac{a}{9 \mathcal{D}_{AB}} \right)^{1/3} \left( - \frac{1}{3} \frac{z^{-1/3}}{z} \right) = - \frac{1}{3} \frac{\eta}{z} \frac{d f}{d \eta}
+	\frac{\partial f}{\partial z} = \frac{\partial f}{\partial \eta} \left( \frac{\partial \eta}{\partial z} \right) = - y \left( \frac{a}{9 \mathscr{D}_{AB}} \right)^{1/3} \left( - \frac{1}{3} \frac{z^{-1/3}}{z} \right) = - \frac{1}{3} \frac{\eta}{z} \frac{d f}{d \eta}
 \end{equation}
 
 $$
@@ -429,9 +429,9 @@ donde $\Gamma (x)$ es la función gamma de x. Como $\int_0^\eta = \int_0^\infty 
 
 \begin{equation}
 	\begin{split}
-	N_{Ay}|_{y=0} = - \mathcal{D}_{AB} \left.  \frac{\partial C_A}{\partial y} \right|_{y=0} = - \mathcal{D}_{AB} C_{A0} \left[ \frac{d}{d\eta} \left( \frac{C_A}{C_{A0}} \right) \frac{\partial \eta}{\partial y} \right]_{y=0} 
+	N_{Ay}|_{y=0} = - \mathscr{D}_{AB} \left.  \frac{\partial C_A}{\partial y} \right|_{y=0} = - \mathscr{D}_{AB} C_{A0} \left[ \frac{d}{d\eta} \left( \frac{C_A}{C_{A0}} \right) \frac{\partial \eta}{\partial y} \right]_{y=0} 
 	\\
-  = -\mathcal{D}_{AB} C_{A0} \left[ \frac{- e^{-\eta^3}}{\Gamma(\frac{4}{3})} \left( \frac{a}{9 \mathcal{D}_{AB}z} \right)^{1/3} \right]_{y=0} = \frac{\mathcal{D}_{AB} C_{A0}}{\Gamma (\frac{4}{3})} \left( \frac{a}{9 \mathcal{D}_{AB} z} \right)^{1/3}
+  = -\mathscr{D}_{AB} C_{A0} \left[ \frac{- e^{-\eta^3}}{\Gamma(\frac{4}{3})} \left( \frac{a}{9 \mathscr{D}_{AB}z} \right)^{1/3} \right]_{y=0} = \frac{\mathscr{D}_{AB} C_{A0}}{\Gamma (\frac{4}{3})} \left( \frac{a}{9 \mathscr{D}_{AB} z} \right)^{1/3}
 	\end{split}
 \end{equation}
 
@@ -440,9 +440,9 @@ El flujo molar de $A$ en $y=0$ es:
 \begin{equation}
 	\begin{split}
 	W_A = \int_0^W \int_0^L N_{Ay}|_{y=0} dz dx
-	=W \frac{\mathcal{D}_{AB} C_{A0}}{\Gamma(\frac{4}{3})} \left( \frac{a}{9 \mathcal{D}_{AB}} \right)^{1/3} \int_0^L z^{-1/3} dz \\
-	=\left( \frac{3}{2} \right) \frac{\mathcal{D}_{AB} C_{A0} W}{\Gamma (\frac{4}{3})} \left( \frac{a}{9 \mathcal{D}_{AB}} \right)^{1/3} L^{2/3}
-	=\frac{2 \mathcal{D}_{AB} C_{A0} WL}{\frac{4}{3} \Gamma (\frac{4}{3})} \left( \frac{a}{9 \mathcal{D}_{AB} L} \right)^{1/3}
+	=W \frac{\mathscr{D}_{AB} C_{A0}}{\Gamma(\frac{4}{3})} \left( \frac{a}{9 \mathscr{D}_{AB}} \right)^{1/3} \int_0^L z^{-1/3} dz \\
+	=\left( \frac{3}{2} \right) \frac{\mathscr{D}_{AB} C_{A0} W}{\Gamma (\frac{4}{3})} \left( \frac{a}{9 \mathscr{D}_{AB}} \right)^{1/3} L^{2/3}
+	=\frac{2 \mathscr{D}_{AB} C_{A0} WL}{\frac{4}{3} \Gamma (\frac{4}{3})} \left( \frac{a}{9 \mathscr{D}_{AB} L} \right)^{1/3}
 	\end{split}
 \end{equation}
 
@@ -459,7 +459,7 @@ donde $\frac{4}{3} \Gamma (\frac{4}{3}) = \Gamma (\frac{7}{3})$
 La situación es similar a las condiciones de la ec. \eqref{eq: manrefx2} en coordenadas cilíndricas, esto es: 
 
 \begin{equation} \label{eq: manrefx17}
-v_z \frac{\partial C_A}{\partial z} = \mathcal{D}_{AB} \left[ \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial C_A}{\partial r} \right)  \right]
+v_z \frac{\partial C_A}{\partial z} = \mathscr{D}_{AB} \left[ \frac{1}{r} \frac{\partial}{\partial r} \left( r \frac{\partial C_A}{\partial r} \right)  \right]
 \end{equation}
 
 \begin{equation} \label{eq: manrefx18}
@@ -479,7 +479,7 @@ Como $v_{\text{máx}} = \frac{\Delta P R^2}{2 \mu L}$, entonces $v_z (y) = v_{\t
 La ec. \eqref{eq: manrefx17} se transforma en:
 
 \begin{equation}
-	2 v_{\text{máx}} \frac{y}{R} = \mathcal{D}_{AB} \frac{\partial^2 C_A}{\partial y^2}
+	2 v_{\text{máx}} \frac{y}{R} = \mathscr{D}_{AB} \frac{\partial^2 C_A}{\partial y^2}
 \end{equation}
 
 debido a que $\frac{y}{R} = 1 - \frac{r}{R}$, entonces $\left( \frac{r}{R} \right)^2 = \left( 1 - \frac{y}{R} \right)^2 \approx 1 - \frac{2 y}{R} + \cdots$ por lo que $v_z = v_{z \text{máx}} (\frac{2y}{R})$ (ec. \eqref{eq: manrefx18}) con nuevas condiciones:

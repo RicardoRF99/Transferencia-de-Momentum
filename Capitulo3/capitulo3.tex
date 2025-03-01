@@ -75,12 +75,16 @@ Considerar dos casos en los que existen dos solutos $A$ y $B$ disueltos en un so
 En ambos casos se estudia el mezclado turbulento en dos sistemas: mezclador estático (a) y dinámico (b).
 
 \begin{figure}[h]
-    \centering
-    \caption{Mezclador estático (a) y mezclador dinámico (b)}
-    \label{fig_3.8}
-\end{figure}
 
-El comportamiento de los solutos $A$ y $B$ se describe por medio de las siguientes ecuaciones de difusión:
+        \includegraphics[width=\linewidth]{Capitulo3/Imagenes/Fig_3.8.png}
+        \caption{Mezclador estático (a) y mezclador dinámico (b)}
+        \label{fig:Fig_3.8}
+
+\end{figure}
+        El comportamiento de los solutos A y B se describe por medio de las siguientes ecuaciones de difusión:
+
+
+
 
 \begin{equation}
     \frac{\partial C_A}{\partial t} + \underline{v} \cdot \nabla C_A = \mathscr{D}_{AS} \nabla^2 C_A + R_A
@@ -164,9 +168,15 @@ donde
        Re=\frac{l_0v_0}{\mu}\rho 
 \end{equation}
 
-En el caso de tanques de mezclado, $l_0$ es el diámetro del impulson, $v_0=l_0N$ (N es la velocidad angular). En el caso del mezclado de dos corrientes de tubos concéntriccos (HACER REFERENCIA AL DIAGRAMA DE ABAJO - FIG.3.9), la función de decaimiento resultante se grafica en función de la distnacia axial. El mezclado a nivel molecular (micomezclado) se alcanza
+En el caso de tanques de mezclado, $l_0$ es el diámetro del impulson, $v_0=l_0N$ (N es la velocidad angular). En el caso del mezclado de dos corrientes de tubos concéntriccos \ref{fig:Fig_3.9}, la función de decaimiento resultante se grafica en función de la distnacia axial. El mezclado a nivel molecular (micromezclado) se alcanza
 
-AQUI VA OTRO DIAGRAMA 3.9
+\begin{figure}[h]
+
+        \includegraphics[width=\linewidth]{Capitulo3/Imagenes/Fig_3.9.png}
+        \caption{Mezclado de 2 corrientes de A y B en tubos concéntricos y su función de decaimiento}
+        \label{fig:Fig_3.9}
+
+\end{figure}
 
 En procesos industriales, normalamente $ReSc\sim10^9$, por lo que la ecuación \ref{eq_3.89} se reduce a:
 
@@ -195,14 +205,13 @@ que tambien es válida para las fluctuaciones.
         \left[ \frac{C_A'-C_B'}{C_{A0}+C_{B0}} \right]_{reac.}=  \left[ \frac{C_A'}{C_{A0}} \right]_{\text{sin reac.} }
 \end{equation}
 Esta ecuación sugiere que las fluctuaciones en $C_A$ y $C_B$ en problemas con reacción tienen lugar al mismo tiempo y escalas de distancia que los problemas sin reacción. Los casos particualres son:
-\\
+\par
 a) Reacción rápida: La velocidad de la reacción es controlada por difusión de las especies. Durante la escala del micromezclado, en la que la difusión es lenta en comparación con la convección, el efecto de la reacción es pequeño. En este caso tenemos:
 \begin{equation}
             \left( \frac{C_A'}{C_{A0}} \right)_{reac.}=  \left( \frac{C_A'}{C_{A0}} \right)_{\text{sin reac.} }
 \end{equation}
 En la práctica, las reacciones rápidas son empleadas para determinar la eficiencia de los mezlcados.
-\\
-
+\par
 b) Reacciones lentas: Considerar el caso de reacciones de segundo orden irreversibles.
 \begin{equation}
     R_A=-k_2C_AC_B
@@ -215,20 +224,90 @@ Esto indica que las fluctuaciones en $C_A$ y $C_B$ incrementan la velocidad de r
 \begin{equation}
     t_A=\frac{C_{A0}}{R_A}\sim\frac{1}{k_2C_{B0}}
 \end{equation}
-Para una reacción rápida $t_{mix}>>t_A$ 
-\\
+Para una reacción rápida $t_{mix}>>t_A$ \newline
 Para una reacción lenta $t_{mix}<<t_A$
 
 
 
 \newpage
-\subsection*{Apéndice A}
+\subsection {Apéndice A}
 a) Transferencia de masa lenta en una placa plana. Uso de la ecuación \textbf{HACER REFERENCIA A LA ECUACIÓN 3.46}
-\\
+\newline
 Estimación de la velocidad de evaporación, $u_{A0}$, como función de $Sc$, del secado de una placa plana porosa saturada de agua \textbf{HACER REFERENCIA A LA FIGURA 3.2} por medio de una corriente de aire bajo condiciones tal que $W_{A0}=0.05$, $W_{A0}=0.01$ y $Sc=0.6$.
-\\
+\newline
 La ecuación \textbf{HACER REFERENCIA A LA ECUACIÓN 3.46} es:
 \begin{equation*}
-    \frac{j_{A0}}{\rho v_o(W_{A0}-W_{A\infty})}Sc^{2/3}=0.332\sqrt{\frac{\nu}{v_\infty x}}
+    \frac{j_{A0}}{\rho v_o(w_{A0}-w_{A\infty})}Sc^{2/3}=0.332\sqrt{\frac{\nu}{v_\infty x}}
 \end{equation*}
-Por medio de las ecuaciones \textbf{EC 1.24 Y 1.26}:
+Por medio de las ecuaciones \textbf{EC 1.24 Y 1.26}: $n_{B0}=w_{A_0}(\underline{n}_{A_0}+\underline{n}_{B_0})+\underline{j}_{A_0}$ ya que $\underline{n}_{B_0}=0$, sustituyendo esta ecuación en la \textbf{HACER REFERENCIA A LA EC 3.46}
+
+\begin{equation*}
+    \frac{n_{A_0}(1-w_{A_0})}{\rho v_\infty (w_{A_0 }-w_{A\infty)}}=0.332Sc^{-2/3}\sqrt{\frac{\gamma}{v_\infty x}}
+\end{equation*}
+
+\begin{equation*}
+n_{A_0}=0.332Sc^{-2/3}\frac{(w_{A_0}-w_{A_\infty})}{1-w_{A_0}}\rho v_\infty\sqrt{\frac{\mu}{v_\infty x \rho}}=(0.332)(0.6)^{-2/3}\frac{(0.05-0.01)}{1-0.05}\sqrt{\frac{\rho v_\infty \mu}{x}}
+\end{equation*}
+\begin{equation*}
+    n_{A_0}=0.0196 \sqrt{\frac{\rho v_\infty \mu}{x}}
+\end{equation*}
+\par
+b) Transferencia de momentum, calor y masa simultáneos
+\newline
+Las ecuaciones \textbf{HACER REFERENCIA A LA EC 3.43} y \textbf{EC 3.44} se pueden generalizar para incluir la transferencia de calor:
+\begin{equation}
+    \frac{q_0}{\rho \hat{C}pv_\infty(T_0-T_\infty)}=\frac{f''(0)}{Pr}\sqrt{\frac{J}{2v_\infty x}}
+    \tag{A-1}
+    \label{eq_A-1}
+\end{equation}
+Las ecuaciones \ref{eq_A-1}, \textbf{HACER REFERENCIA A LA EC 3.43 3.44} se pueden utilizarse en las transferencias simultáneas generalizando la expresión de k \textbf{HACER REFERENCIA A LA EC 3.38}
+
+\begin{equation}
+    K=\frac{\rho_0 v_0 (x)}{\rho v_\infty}\sqrt{\frac{2v_\infty x}{\gamma}}
+    \tag{A-2}
+    \label{eq_A-2}
+\end{equation}
+donde $\rho$, $\mu$, $\hat{C}p$ y $\mathscr{D}_{AB}$ sean evaluadas a las condiciones de referencias siguientes: $T_f=\frac{1}{2}(T_0+T_\infty)$ y $W_{Af}=\frac{1}{2}(W_{A_0}+W_{A\infty})$
+\newline
+La resolución de problemas de transferencia simultáneas se facilita por medio de las siguientes relaciones de los fluxes:
+
+\begin{equation*}
+   R_v=\frac{(n_{A_0}+n_{B_0})(v_\infty-e)}{\tau_0} 
+\end{equation*}
+
+\begin{equation}
+R_T=\frac{(n_{A_0}+n_{B_0})\hat{C}_p(T_o-T\infty)}{q_0} \tag{A-3} \label{eq_A-3}
+\end{equation}
+
+\begin{equation*}
+R_w=\frac{(w_{A_0}+w_{a_\infty})(n_{A_0}+n_{B_0})}{n_{A_0}-w_{A_0}(n_{A_0}+n_{B_0})}
+\end{equation*}
+
+Los R son independientes de x y se relacionan a los números de $\Lambda=(Re,Sc,Pr)$ de acuerdo a:
+\begin{equation*}
+R=\frac{K\Lambda}{f''(0)} \tag{A-4} \label{eq_A-4}
+\end{equation*}
+\underline{Ejemplo:} Utilizar las ecuaciones \ref{eq_A-3} y \ref{eq_A-4} para obtener ecuaciones implícitas del flux de masa K en la superficie porosa. Para ello, se analizaran 3 casos:
+
+\begin{figure}[h]
+
+        \includegraphics[width=\linewidth]{Capitulo3/Imagenes/Fig_A.1.png}
+    \caption{Enfriamiento por transpiración en una placa porosa.}
+        \label{fig:Fig_A.1}
+
+\end{figure}
+
+\begin{enumerate}
+    \item Evaporación de un líquido A en una corriente de A y B. B es insoluble en A. \newline
+    Como $n_{B_0}=0$, $R_w$ en \ref{eq_A-3} se puede calcular: $R_w=\frac{w_{A_0}-w_{A\infty}}{1-w_{A_0}}$, donde $K=\frac{R_w f''(0)}{Sc}=\frac{1}{Sc}\frac{w_{A_0}-w_{A\infty}}{1-w_{A_0}}f''(0)$
+    \item Reacción irreversible de A (gas) en C (sólido) $\to$ B (gas) de acuerdo a $A+C\to 2B$. Pesos moleculares de A y B son iguales. Como $n_{B_0}=-2n_{A_0}$ y $w_A=0$, $R_w=\frac{0-w_{A_\infty}}{-1}=w_{A_\infty}$, donde $K=\frac{1}{Sc}w_{a_\infty f''(0)}$
+    \item Enfriamiento por transpiración. Gas A solamente
+    \newline 
+    Balance de energía:
+    \begin{equation*}
+        q_0=v_0\hat{C}_p\rho_0(T_a-T_0 )=n_{A_0}\hat{C}_p(T_a-T_0)
+    \end{equation*}
+    De las ecuaciones \ref{eq_A-3}: $R_T=\frac{n_{A_0}\hat{C}_p(T_o-T\infty)}{n_{A_0}\hat{C}_p(T_a-T_0)}$
+    \newline
+    El valor de \( K \) es: \[ K = \frac{1}{Pr} \left( \frac{T_0 - T_\infty}{T_a - T_0} \right) f''(0) \]
+\end{enumerate}
