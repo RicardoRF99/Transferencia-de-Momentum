@@ -332,3 +332,131 @@ R=\frac{K\Lambda}{f''(0)} \tag{A-4} \label{eq_A-4}
     \newline
     El valor de \( K \) es: \[ K = \frac{1}{Pr} \left( \frac{T_0 - T_\infty}{T_a - T_0} \right) f''(0) \]
 \end{enumerate}
+\section{Apéndice B}
+ \textbf{Problemas de la Difusión de Taylor}
+ \vspace{0.6 cm}
+    
+    a)- Verificación de la solución
+    \newline
+    Primeramente, considerar que $\bar{z}=z–\langle v\rangle t$ y para el componente A $\langle \rho_A \rangle=\rho =\rho (z,t)$. Ahora:
+    \begin{equation*}
+        d\rho=\left(\frac{\partial\rho}{\partial t}\right)_zdt+\left(\frac{\partial\rho}{\partial z}\right)_tdz
+    \end{equation*}
+    Derivando C, r, a, t a con $\bar{z}$ constante:
+    \begin{equation*}
+        \left(\frac{\partial\rho}{\partial t}\right)_{\bar{z}}dt=\left(\frac{\partial\rho}{\partial t}\right)_z+\left(\frac{d\rho}{dz}\right)_t\langle v_z\rangle
+    \end{equation*}
+    \begin{equation*}
+        \frac{\partial^2 \rho}{\partial \bar{z}^2}=\frac{\partial^2 \rho}{\partial z^2}
+    \end{equation*}
+    Sustityuendo en la ec. \textbf{3.63} obtuvimos:
+    \begin{equation*}
+            \left(\frac{\partial\rho}{\partial t}\right)_{\bar{z}}=k\left(\frac{\partial^2 \rho}{\partial z^2}\right)_t
+            \tag{A-5}
+            \label{A-5}
+    \end{equation*}
+    Cuya solución es (ec. \textbf{3.64}:
+    \begin{equation*}
+        \rho=\frac{A}{\sqrt{t}}\text{exp}\left(-\frac{\bar{z}}{4kt}\right)
+    \end{equation*}
+    donde $A=\frac{m_A}{2\pi R^2 \sqrt{\pi k}}$
+    
+    \vspace{1 cm}
+    Demostración:
+    \begin{equation*}
+         \left(\frac{\partial\rho}{\partial t}\right)_{\bar{z}}=\rho \frac{\bar{z}}{4kt^2}-A\text{ exp}\left(\frac{-\bar{z}^2}{4kt} \right) \left(-\frac{1}{2}\frac{1}{\sqrt{t}^3} \right)=\frac{\rho \bar{z}^2}{4kt}-\frac{\rho}{2t}
+    \end{equation*}
+    \begin{equation*}
+         \left(\frac{\partial\rho}{\partial {\bar{z}}}\right)_t=\rho \frac{\bar{z}}{2kt}
+    \end{equation*}
+    \begin{equation*}
+        \left( \frac{\partial^2 \rho}{\partial \bar{z}^2}\right)_t=-\frac{\rho}{2kt}-\frac{\bar{z}}{2kt} \left( \frac{\partial \rho}{\partial {\bar{z}}}\right)=-\frac{\rho}{2kt}+\frac{z^2 \rho}{4k^2t^2}
+    \end{equation*}
+    Sustityuendo en \eqref{A-5} se verifica la solución.\\
+
+    También se puede demostrar que:
+    \begin{equation*}
+        \pi R^2 \int_{-\infty}^{\infty}\langle C_A\rangle dz=ma
+        \tag{A-6}
+        \label{A-6}
+    \end{equation*}
+    como:
+    \begin{equation*}
+        \int_{-\infty}^{\infty}\frac{A}{\sqrt{t}}\text{ exp}\left( -\frac{\bar{z}^2}{4kt}\right)dz=\frac{m_A}{2 \pi R^2 \sqrt{\pi kt}}\sqrt{4\pi kt}=\frac{m_A}{\pi R^2}
+    \end{equation*}
+    entonces \eqref{A-6} se verifica.
+
+    \vspace{1 cm}
+    b)- Difusión desde una fuente puntual intantánea
+    
+    \vspace{0.5 cm}
+    Al tiempo \( t=0 \), una masa \( m_A \) se inyecta en una media de fluido \( B \), y se difunde radialmente en todas direcciones. La solución está dada por:
+
+    \begin{equation*}
+        \rho_A = \frac{m_A}{(4\pi \mathscr{D}_{AB}t)^{3/2}} \exp\left( \frac{-r^2}{4 \mathscr{D}_{AB} t} \right)
+        \tag{A-7}
+        \label{A-7}
+    \end{equation*}
+    Esta solución satisface la ley de Flick. Demostración:\\
+    En coordenadas esféricas, la difusión radial se describe por la siguiente ecuación:
+    
+    \[
+        \frac{\partial \rho_A}{\partial t} = \mathscr{D}_{AB} \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial \rho_A}{\partial r} \right)
+        \tag{A-8}
+        \label{A-8}
+    \]
+
+    \[
+        \frac{\partial \rho_A}{\partial t} = \rho_A \left[ \frac{r^2}{4 \mathscr{D}_{AB} t^2} \right] - \frac{3}{2t}
+    \]
+
+    \[
+        \frac{\partial \rho_A}{\partial r} = \rho_A \left( \frac{-r}{2 \mathscr{D}_{AB} t} \right)
+    \]
+
+    \begin{align*}
+    \mathscr{D}_{AB} \frac{1}{r^2} \frac{\partial}{\partial r} \left[ \rho_A \left( \frac{-r^3}{2 \mathscr{D}_{AB} t} \right) \right] 
+    &= \mathscr{D}_{AB} \frac{r^2}{2 \mathscr{D}_{AB} t^2} \rho_A \left( \frac{1}{2 \mathscr{D}_{AB} t} \right) 
+    + \rho_A \left( \frac{-1}{2 \mathscr{D}_{AB} t} \right) \left( \frac{3 r^2}{r^2} \right) \\
+    &= \rho_A \left[ \frac{r^2}{4 \mathscr{D}_{AB} t^2} - \frac{3}{2t} \right]
+\end{align*}
+
+
+lo cual verifica la ecuación \eqref{A-8}. Cuando \( r \to \infty \), \( \rho \to 0 \).
+
+La integración de \eqref{A-7} nos da la masa \( m_A \) de acuerdo a:
+
+    \[
+        m_A = \int_0^{2\pi}\int_0^\pi\int_{0}^{\infty} \frac{m_A}{(4\pi \mathscr{D}_{AB} t)^{3/2}} \exp \left( -\frac{r^2}{4 \mathscr{D}_{AB} t} \right) r \, dr \, d\theta \, d\phi
+    \tag{A-8}
+    \label{A-9}
+    \]
+
+Con cambio de variable \(u=\sqrt{\frac{1}{4\mathscr{D}_{AB}}}\) tenemos:
+    \[
+     r^2 \, dr = (\sqrt{4 \mathscr{D}_{AB} t} \, du) \left( 4 \mathscr{D}_{AB} t  \right)u^2=u^2\left( 4 \mathscr{D}_{AB}t\right)^{3/2}
+    \]
+
+La ecuación \eqref{A-9} se transforma en:
+
+    \[
+        \frac{4\pi m_A (4 \mathscr{D}_{AB} t)^{3/2}}{(4 \pi \mathscr{D}_{AB} t)^{3/2}} \int_{0}^{\infty} \exp(-u^2) u^2 \, du = 
+        \frac{4\pi m_A}{\pi^{3/2}} \left(\frac{\sqrt{\pi}}{4}\right) = m_A
+    \]
+    \\
+Cuando \( t \to 0 \), la ecuación \eqref{A-7} puede transformarse definiendo la frecuencia modificada $\omega = \frac{1}{4 \mathscr{D}_{AB} t}$ en la siguiente expresión:
+
+    \[
+        \rho_A = m_A \left( \frac{\omega}{\pi} \right)^{3/2} e^{-\omega r^2}, \quad \omega \to \infty
+    \]
+
+El límite de esta función es:
+    \[
+        \rho_A = m_A \delta(x) \delta(y) \delta(z)
+        \tag{A-10}
+        \label{A-10}
+    \]
+lo que significa que la materia se concentra en el origen cuando \( t \to 0 \).
+\newpage
+\section{Tarea 7}
+\end{document}
