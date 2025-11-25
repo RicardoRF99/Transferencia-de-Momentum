@@ -7,7 +7,7 @@ Este capítulo consta de las siguientes partes:
     \item Convección forzada con reacción química homogéna en una placa plana.
     \item Convección forzada  placa plana con transferencia de masa rápida.
     \item Convección forzada  placa plana con transferencia de masa lenta.
-    \item Dispersión de Tayloren flujo laminar.
+    \item Dispersión de Taylor en flujo laminar.
     \item Transferencia de masa con reacción de $1^{\text{er}}$ orden en flujo laminar turbulento.
     \item Flujo turbulento en reacción de $2^{\circ}$ orden. Mezclado turbulento.
 \end{enumerate}
@@ -82,6 +82,144 @@ En el caso de $k = 0$ ($v_0 (x) = 0$). De acuerdo a la ec. \ref{eq_3.43} podemos
         
 \end{equation}
 \section{Difusión de Taylor en flujo laminar}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Capitulo3/Imagenes/Fig_3.4.png}
+    \caption{La difusión axial de un pulso de concentración de A en el contexto de la dispersión de Taylor en un tubo.$\langle\rho_A\rangle$ es la concentración promedio de A. Suponiendo que $\mu$, $\rho$ y $\mathscr{D}_{AB}$ son constantes, se describe la evolución del pulso con la distancia.}
+    \label{fig:Fig_3.4}
+\end{figure}
+La ecuación de difusión de $w_A(r,z,t)$ es:
+\begin{equation}
+    \frac{\partial w_A}{\partial t}+v_{\text{máx}}\left[1-\frac{r^2}{R^2}\right]\frac{\partial w_A}{\partial z}=\mathscr{D}_{AB}\left[\frac{1}{r}\frac{\partial}{\partial r}\left( r \frac{\partial w_A}{\partial r}\right)+\frac{\partial^2w_A}{\partial z}\right]
+    \label{eq_3.47}
+\end{equation}
+Con condiciones de frontera
+\begin{equation}
+\frac{\partial w_A}{\partial r}\Bigg|_{r=0,R}=0
+\label{eq_3.48}
+\end{equation}
+Definiendo la concentración promedio $\langle w_A\rangle$:
+\begin{equation}
+    \langle w_A\rangle=\frac{\int^{2\pi}_0\int^R_0w_Ardrd\theta}{\pi R^2}=\frac{2}{r^2}\int^R_0w_Ardr
+\end{equation}
+Para números de Peclet, $\text{Pe}_{AB}\ge 70$, $\left( \text{Pe}_{AB}=\frac{R\langle v_z \rangle}{\mathscr{D}_{AB}}\right)$, $L_p \sim 170R$, Taylor da la solución para tiempos largos. Esto es
+    \[
+    \frac{L_p}{v_{\text{máx}}}>>\frac{R^2}{(3.8)^2\mathscr{D}_{AB}}
+    \]
+En el sentido axial, la convección domina, por lo que 
+\begin{equation}
+    \frac{\partial^2w_A}{\partial z^2}\simeq 0
+    \label{eq_3.50}
+\end{equation}
+
+
+\noindent Utilizando la variable desplazada
+\begin{equation}
+\bar{z} = z - \langle v_z \rangle t
+\end{equation}
+y sustituyendo en la ec.\eqref{eq_3.47} obtenemos:
+\begin{equation}
+\frac{\partial w_A}{\partial t}
++ v_{\mathrm{max}} \left( \frac{1}{2} - \xi^2 \right)
+\frac{\partial w_A}{\partial \bar{z}}
+= \frac{\mathscr{D}_{AB}}{R^2}
+\frac{1}{\xi} \frac{\partial}{\partial \xi}
+\left( \xi \frac{\partial w_A}{\partial \xi} \right)
+\end{equation}
+donde $\xi =r/R$. La variable $\bar{z}$ es cero cuando la posición del pulso está centrada en $\langle v_z\rangle$. $z=0$ marca el inicio del perfil de velocidades, de acuerdo a que $v_z|_{r=R}=0$ cuando $\xi =1$, el perfil de concentraciones se encuentra en $-\frac{v_{\text{máx}}}{2}=-\langle v_z \rangle$, el cual presenta dos mínimos (en la pared) y en el máximo en el centro. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Capitulo3/Imagenes/Fig_3.5.png}
+    \caption{Perfiles de velocidades y concentraciones}
+    \label{fig:Fig_3.5}
+\end{figure}
+
+\noindent La condición \eqref{eq_3.50} y la derivada temporal tomada a $\bar{z}$ constante implica que a tiempos largos $\frac{\partial}{\partial t}\to 0$. La ecuación a régimen cuasi-permanente toma la forma:
+\begin{equation}
+\frac{R^2 v_{\mathrm{max}}}{\mathscr{D}_{AB}}\left( \frac{1}{2} - \xi^2 \right)\frac{\partial w_A}{\partial \bar{z}}=\frac{1}{\xi} \frac{\partial}{\partial \xi}\left( \xi \frac{\partial w_A}{\partial \xi} \right)
+\label{eq_3.53}
+\end{equation}
+De acuerdo con la condición \eqref{eq_3.50}, $w_A(\xi, \bar{z},t)$ puede ser expresada:
+\begin{equation}
+w_A(\xi, \bar{z}, t) = \langle w_A \rangle + \omega'_A(\xi,\bar{z}, t) \hspace{1cm} \langle w_A\rangle=\langle w_A\rangle (\bar{z},t)
+\end{equation}
+La ec. \eqref{eq_3.53} toma la forma:
+\begin{equation}
+\frac{R^2 v_{\mathrm{max}}}{\mathscr{D}_{AB}}\left( \frac{1}{2} - \xi^2 \right)\frac{\partial \langle w_A\rangle}{\partial \bar{z}}=\frac{1}{\xi} \frac{\partial}{\partial \xi}\left( \xi \frac{\partial w_A}{\partial \xi} \right)
+\label{eq_3.55}
+\end{equation}
+donde $w_A'<<\langle w_A\rangle$ es despreciable. Integrando la ec. \eqref{eq_3.55} con las condiciones \eqref{3.48} obtenemos:
+\begin{equation*}
+\frac{R^2 v_{\mathrm{max}}}{\mathscr{D}_{AB}}\frac{\partial \langle w_A\rangle}{\partial \bar{z}}=C_0=\frac{1}{\left( \frac{1}{2} - \xi^2 \right)\xi} \frac{\partial}{\partial \xi}\left( \xi \frac{\partial w_A}{\partial \xi} \right)
+\end{equation*}
+Integrando:
+\[
+C_0\left(\frac{1}{2}-\xi^2\right)\xi d\xi=\xi\frac{\partial w_A}{\partial \xi}\Rightarrow C_0\left[\frac{1}{4}\xi^2-\frac{\xi^4}{4}\right]=\xi\frac{\partial w_A}{\partial\xi}
+\]
+\begin{equation}
+w_A(\xi, \bar{z}) = C_0\left[\frac{1}{8}\xi^2-\frac{1}{16}\xi^4\right]=\frac{R^2 v_{\mathrm{max}}}{8 \mathscr{D}_{AB}}\frac{\partial \langle w_A \rangle}{\partial \bar{z}}\left[ \xi^2 - \frac{1}{2} \xi^4 \right]+ w_A(0, \bar{z})
+\label{eq_3.56}
+\end{equation}
+Evaluando $\langle w_A\rangle$
+\begin{equation}
+\langle w_A \rangle= \frac{\displaystyle \int_0^1 w_A \xi \, d\xi}{\displaystyle \int_0^1 \xi \, d\xi}= \frac{R^2 v_{\mathrm{max}}}{24 \mathscr{D}_{AB}}\frac{\partial \langle w_A \rangle}{\partial \bar{z}}+ w_A(0, \bar{z})
+\label{eq_3.57}
+\end{equation}
+Como $v_{\text{max}}=2\langle v_z\rangle$, restando las ecs. \eqref{eq_3.56} y \eqref{eq_3.57} obtenemos:
+\begin{equation}
+w_A - \langle w_A \rangle= \frac{R^2 \langle v_z \rangle}{2 \mathscr{D}_{AB}}\frac{\partial \langle w_A \rangle}{\partial \bar{Z}}\left( -\frac{1}{3} + \xi^2 - \frac{1}{2} \xi^4 \right)
+\label{eq_3.58}
+\end{equation}
+A $\bar{z}$ constante (el flujo relativo a la velocidad promedio $\langle v_z \rangle$), el flux de masa $n_{AZ}$, suponiendo $\rho$ constante ($\rho w_A=\rho_A$) es:
+\begin{equation}
+n_{Az}=\rho_Av_z=(\rho_A-\langle \rho_A\rangle)v_z+\langle v_z\rangle \rho_A
+\label{eq_3.59}
+\end{equation}
+Promediando la ec. \eqref{eq_3.59} obtenemos:
+\[
+    \langle n_{Az}\rangle=\langle\rho_A\langle v_Z\rangle\rangle+\int^R_0(\rho_A-\langle \rho_A\rangle)v_zrdr
+\]
+\begin{equation}
+    \langle n_{AZ}\rangle=\langle \rho_A\rangle\langle v_z\rangle+\rho \int^1_0(w_A-\langle w_A\rangle)\frac{\langle v_z \rangle}{2}\left(\frac{1}{2}-\xi^2\right)\xi d\xi
+    \label{eq_3.60}
+\end{equation}
+Sustituyendo \eqref{eq_3.58} en \eqref{eq_3.60} obtenemos:
+\begin{equation*}
+    \langle n_{Az}\rangle=\langle \rho_A\rangle\langle v_z\rangle+\frac{ R^2 \rho \langle v_z \rangle^2}{\mathscr{D}_{AB}}\frac{\partial \langle w_A \rangle}{\partial \bar{z}}\int_0^1 \left(-\frac{1}{3} + \xi^2 - \frac{1}{2} \xi^4\right)\left(\frac{1}{2} - \xi^2\right)\xi \, d\xi
+\end{equation*}
+Las ecs. \eqref{eq_3.59} y \eqref{eq_3.60} fueron deducidas suponiendo que $\rho\langle w_A\langle v_z\rangle \rangle=\langle \rho_A\rangle\langle v_z\rangle$ y el hecho de que $v_z=v_{Az}$ porque cuando la difusión molecular axial fue despreciada, A y B se mueven a la misma velocidad. Efectuando la integración, obtenemos: 
+\begin{equation}
+    \langle n_{Az}\rangle=\langle \rho_A\rangle\langle v_z\rangle-K\frac{\partial \rho_A}{\partial \bar{z}}
+    \hspace{1 cm} \text{$z=\bar{z}$, relativo a coordenadas estacionarias}
+    \label{eq_3.61} 
+\end{equation}
+donde
+\begin{equation}
+    K=\frac{R^2\langle v_z\rangle^2}{48\mathscr{D}_{AB}}=\frac{1}{48}\mathscr{D}_{AB}\text{Pe}_{AB}^2
+    \label{eq_3.62}
+\end{equation}
+es el coeficiente de dispersión axial. Pe$_{AB}^2$ es el número de Peclet.
+
+A partir de la ec. de continuidad \eqref{eq_1.15}  sin reacción:
+\[
+\frac{\partial \langle \rho_A\rangle}{\partial t}+\nabla\cdot\langle \underline{n}_A\rangle=0
+\]
+\noindent Obtenemos: 
+\begin{equation}
+\frac{\partial}{\partial t} \langle \rho_A \rangle+ \langle v_z \rangle \frac{\partial}{\partial z} \langle \rho_A \rangle= K \frac{\partial^2}{\partial z^2} \langle \rho_A \rangle
+    \label{eq_3.63}
+\end{equation}
+Si la masa m$_A$ se modela como una función $\delta$ en el espacio, la ec. \eqref{eq_3.63}, se puede resolver para obtener la forma del pulso a tiempos largos:
+\begin{equation}
+    \langle\rho_A\rangle=\frac{m_A}{2\pi R^2\sqrt{\pi Kt}}\text{exp}\left[-\frac{(z-\langle v_z\rangle t)^2}{4Kt}\right]
+    \label{eq_3.64}
+\end{equation}
+Esta ecuación puede ser utilizada para obtener $\mathscr{D}_{AB}$ a partir de datos de concentración del pulso.
+
+Desarrollos posteriores (por ejemplo, Aris) mejoraron las predicciones con la siguiente expresión para K:
+\begin{equation}
+    K=\mathscr{D}_{AB}\left( 1+\frac{1}{48} \text{Pe}^2_{AB}\right)
+\end{equation}
 \section{Transferencia de masa con reacción de $1^{er}$ orden en flujo turbulento}
 
 
@@ -251,16 +389,16 @@ Para una reacción lenta $t_{mix}<<t_A$
 
 \newpage
 \section* {Apéndice A}
-a) Transferencia de masa lenta en una placa plana. Uso de la ecuación \textbf{HACER REFERENCIA A LA ECUACIÓN 3.46}
+a) Transferencia de masa lenta en una placa plana. Uso de la ecuación \eqref{eq_3.46}
 \newline
 
-Estimación de la velocidad de evaporación, $u_{A0}$, como función de $Sc$, del secado de una placa plana porosa saturada de agua \textbf{HACER REFERENCIA A LA FIGURA 3.2} por medio de una corriente de aire bajo condiciones tal que $W_{A0}=0.05$, $W_{A0}=0.01$ y $Sc=0.6$.
+Estimación de la velocidad de evaporación, $u_{A0}$, como función de $Sc$, del secado de una placa plana porosa saturada de agua \ref{fig:Fig_3.2} por medio de una corriente de aire bajo condiciones tal que $W_{A0}=0.05$, $W_{A0}=0.01$ y $Sc=0.6$.
 \newline
-La ecuación \textbf{HACER REFERENCIA A LA ECUACIÓN 3.46} es:
+La ecuación \eqref{eq_3.46} es:
 \begin{equation*}
     \frac{j_{A0}}{\rho v_o(w_{A0}-w_{A\infty})}Sc^{2/3}=0.332\sqrt{\frac{\nu}{v_\infty x}}
 \end{equation*}
-Por medio de las ecuaciones \eqref{eq_1.24}: $n_{B0}=w_{A_0}(\underline{n}_{A_0}+\underline{n}_{B_0})+\underline{j}_{A_0}$ ya que $\underline{n}_{B_0}=0$, sustituyendo esta ecuación en la \textbf{HACER REFERENCIA A LA EC 3.46}
+Por medio de las ecuaciones \eqref{eq_1.24}: $n_{B0}=w_{A_0}(\underline{n}_{A_0}+\underline{n}_{B_0})+\underline{j}_{A_0}$ ya que $\underline{n}_{B_0}=0$, sustituyendo esta ecuación en la \eqref{eq_3.46}
 
 \begin{equation*}
     \frac{n_{A_0}(1-w_{A_0})}{\rho v_\infty (w_{A_0 }-w_{A\infty)}}=0.332Sc^{-2/3}\sqrt{\frac{\gamma}{v_\infty x}}
@@ -275,13 +413,13 @@ n_{A_0}=0.332Sc^{-2/3}\frac{(w_{A_0}-w_{A_\infty})}{1-w_{A_0}}\rho v_\infty\sqrt
 \par
 b) Transferencia de momentum, calor y masa simultáneos
 \newline
-Las ecuaciones \textbf{HACER REFERENCIA A LA EC 3.43} y \textbf{EC 3.44} se pueden generalizar para incluir la transferencia de calor:
+Las ecuaciones \eqref{eq_3.43} y \eqref{eq_3.44} se pueden generalizar para incluir la transferencia de calor:
 \begin{equation}
     \frac{q_0}{\rho \hat{C}pv_\infty(T_0-T_\infty)}=\frac{f''(0)}{Pr}\sqrt{\frac{J}{2v_\infty x}}
     \tag{A-1}
     \label{eq_A-1}
 \end{equation}
-Las ecuaciones \eqref{eq_A-1}, \textbf{HACER REFERENCIA A LA EC 3.43 3.44} se pueden utilizarse en las transferencias simultáneas generalizando la expresión de k \textbf{HACER REFERENCIA A LA EC 3.38}
+Las ecuaciones \eqref{eq_A-1}, \eqref{eq_3.43} y \eqref{eq_3.44} se pueden utilizarse en las transferencias simultáneas generalizando la expresión de k \eqref{eq_3.38}
 
 \begin{equation}
     K=\frac{\rho_0 v_0 (x)}{\rho v_\infty}\sqrt{\frac{2v_\infty x}{\gamma}}
@@ -332,3 +470,133 @@ R=\frac{K\Lambda}{f''(0)} \tag{A-4} \label{eq_A-4}
     \newline
     El valor de \( K \) es: \[ K = \frac{1}{Pr} \left( \frac{T_0 - T_\infty}{T_a - T_0} \right) f''(0) \]
 \end{enumerate}
+\section*{Apéndice B}
+ \textbf{Problemas de la Difusión de Taylor}
+ \vspace{0.6 cm}
+    
+    a)- Verificación de la solución
+    \newline
+    Primeramente, considerar que $\bar{z}=z–\langle v\rangle t$ y para el componente A $\langle \rho_A \rangle=\rho =\rho (z,t)$. Ahora:
+    \begin{equation*}
+        d\rho=\left(\frac{\partial\rho}{\partial t}\right)_zdt+\left(\frac{\partial\rho}{\partial z}\right)_tdz
+    \end{equation*}
+    Derivando C, r, a, t a con $\bar{z}$ constante:
+    \begin{equation*}
+        \left(\frac{\partial\rho}{\partial t}\right)_{\bar{z}}dt=\left(\frac{\partial\rho}{\partial t}\right)_z+\left(\frac{d\rho}{dz}\right)_t\langle v_z\rangle
+    \end{equation*}
+    \begin{equation*}
+        \frac{\partial^2 \rho}{\partial \bar{z}^2}=\frac{\partial^2 \rho}{\partial z^2}
+    \end{equation*}
+    Sustityuendo en la ec. \textbf{REFERENCIA3.63} obtuvimos:
+    \begin{equation*}
+            \left(\frac{\partial\rho}{\partial t}\right)_{\bar{z}}=k\left(\frac{\partial^2 \rho}{\partial z^2}\right)_t
+            \tag{A-5}
+            \label{A-5}
+    \end{equation*}
+    Cuya solución es la ec. \textbf{REFERENCIA 3.64}:
+    \begin{equation*}
+        \rho=\frac{A}{\sqrt{t}}\text{exp}\left(-\frac{\bar{z}}{4kt}\right)
+    \end{equation*}
+    donde $A=\frac{m_A}{2\pi R^2 \sqrt{\pi k}}$
+    
+    \vspace{1 cm}
+    Demostración:
+    \begin{equation*}
+         \left(\frac{\partial\rho}{\partial t}\right)_{\bar{z}}=\rho \frac{\bar{z}}{4kt^2}-A\text{ exp}\left(\frac{-\bar{z}^2}{4kt} \right) \left(-\frac{1}{2}\frac{1}{\sqrt{t}^3} \right)=\frac{\rho \bar{z}^2}{4kt}-\frac{\rho}{2t}
+    \end{equation*}
+    \begin{equation*}
+         \left(\frac{\partial\rho}{\partial {\bar{z}}}\right)_t=\rho \frac{\bar{z}}{2kt}
+    \end{equation*}
+    \begin{equation*}
+        \left( \frac{\partial^2 \rho}{\partial \bar{z}^2}\right)_t=-\frac{\rho}{2kt}-\frac{\bar{z}}{2kt} \left( \frac{\partial \rho}{\partial {\bar{z}}}\right)=-\frac{\rho}{2kt}+\frac{z^2 \rho}{4k^2t^2}
+    \end{equation*}
+    Sustityuendo en \eqref{A-5} se verifica la solución.\\
+
+    También se puede demostrar que:
+    \begin{equation*}
+        \pi R^2 \int_{-\infty}^{\infty}\langle C_A\rangle dz=ma
+        \tag{A-6}
+        \label{A-6}
+    \end{equation*}
+    como:
+    \begin{equation*}
+        \int_{-\infty}^{\infty}\frac{A}{\sqrt{t}}\text{ exp}\left( -\frac{\bar{z}^2}{4kt}\right)dz=\frac{m_A}{2 \pi R^2 \sqrt{\pi kt}}\sqrt{4\pi kt}=\frac{m_A}{\pi R^2}
+    \end{equation*}
+    entonces \eqref{A-6} se verifica.
+
+    \vspace{1 cm}
+    b)- Difusión desde una fuente puntual intantánea
+    
+    \vspace{0.5 cm}
+    Al tiempo \( t=0 \), una masa \( m_A \) se inyecta en una media de fluido \( B \), y se difunde radialmente en todas direcciones. La solución está dada por:
+
+    \begin{equation*}
+        \rho_A = \frac{m_A}{(4\pi \mathscr{D}_{AB}t)^{3/2}} \exp\left( \frac{-r^2}{4 \mathscr{D}_{AB} t} \right)
+        \tag{A-7}
+        \label{A-7}
+    \end{equation*}
+    Esta solución satisface la ley de Flick. Demostración:\\
+    En coordenadas esféricas, la difusión radial se describe por la siguiente ecuación:
+    
+    \[
+        \frac{\partial \rho_A}{\partial t} = \mathscr{D}_{AB} \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial \rho_A}{\partial r} \right)
+        \tag{A-8}
+        \label{A-8}
+    \]
+
+    \[
+        \frac{\partial \rho_A}{\partial t} = \rho_A \left[ \frac{r^2}{4 \mathscr{D}_{AB} t^2} \right] - \frac{3}{2t}
+    \]
+
+    \[
+        \frac{\partial \rho_A}{\partial r} = \rho_A \left( \frac{-r}{2 \mathscr{D}_{AB} t} \right)
+    \]
+
+    \begin{align*}
+    \mathscr{D}_{AB} \frac{1}{r^2} \frac{\partial}{\partial r} \left[ \rho_A \left( \frac{-r^3}{2 \mathscr{D}_{AB} t} \right) \right] 
+    &= \mathscr{D}_{AB} \frac{r^2}{2 \mathscr{D}_{AB} t^2} \rho_A \left( \frac{1}{2 \mathscr{D}_{AB} t} \right) 
+    + \rho_A \left( \frac{-1}{2 \mathscr{D}_{AB} t} \right) \left( \frac{3 r^2}{r^2} \right) \\
+    &= \rho_A \left[ \frac{r^2}{4 \mathscr{D}_{AB} t^2} - \frac{3}{2t} \right]
+\end{align*}
+
+
+lo cual verifica la ecuación \eqref{A-8}. Cuando \( r \to \infty \), \( \rho \to 0 \).
+
+La integración de \eqref{A-7} nos da la masa \( m_A \) de acuerdo a:
+
+    \[
+        m_A = \int_0^{2\pi}\int_0^\pi\int_{0}^{\infty} \frac{m_A}{(4\pi \mathscr{D}_{AB} t)^{3/2}} \exp \left( -\frac{r^2}{4 \mathscr{D}_{AB} t} \right) r \, dr \, d\theta \, d\phi
+    \tag{A-8}
+    \label{A-9}
+    \]
+
+Con cambio de variable \(u=\sqrt{\frac{1}{4\mathscr{D}_{AB}}}\) tenemos:
+    \[
+     r^2 \, dr = (\sqrt{4 \mathscr{D}_{AB} t} \, du) \left( 4 \mathscr{D}_{AB} t  \right)u^2=u^2\left( 4 \mathscr{D}_{AB}t\right)^{3/2}
+    \]
+
+La ecuación \eqref{A-9} se transforma en:
+
+    \[
+        \frac{4\pi m_A (4 \mathscr{D}_{AB} t)^{3/2}}{(4 \pi \mathscr{D}_{AB} t)^{3/2}} \int_{0}^{\infty} \exp(-u^2) u^2 \, du = 
+        \frac{4\pi m_A}{\pi^{3/2}} \left(\frac{\sqrt{\pi}}{4}\right) = m_A
+    \]
+    \\
+Cuando \( t \to 0 \), la ecuación \eqref{A-7} puede transformarse definiendo la frecuencia modificada $\omega = \frac{1}{4 \mathscr{D}_{AB} t}$ en la siguiente expresión:
+
+    \[
+        \rho_A = m_A \left( \frac{\omega}{\pi} \right)^{3/2} e^{-\omega r^2}, \quad \omega \to \infty
+    \]
+
+El límite de esta función es:
+
+    \[
+        \rho_A = m_A \delta(x) \delta(y) \delta(z)
+        \tag{A-10}
+        \label{A-10}
+    \]
+
+lo que significa que la materia se concentra en el origen cuando \( t \to 0 \).
+\newpage
+\section{Tarea 7}
+
